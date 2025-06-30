@@ -6,7 +6,8 @@
   "scripts": {
     "test:src": "node --experimental-vm-modules node_modules/jest/bin/jest.js ./src",
     "test:config": " node --experimental-vm-modules node_modules/jest/bin/jest.js ./config",
-    "dev": "webpack serve --open"
+    "dev": "webpack serve --open --config config/webpack.dev.ts",
+    "build": "npm run test:src && webpack --config config/webpack.prod.ts"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +15,7 @@
   "dependencies": {
     "@types/gulp": "^4.0.17",
     "@types/jest": "^30.0.0",
+    "@types/webpack-dev-server": "^4.7.2",
     "browserslist": "^4.25.1",
     "css-loader": "^7.1.2",
     "css-minimizer-webpack-plugin": "^7.0.2",
@@ -30,6 +32,7 @@
     "typescript": "^5.8.3",
     "webpack": "^5.99.9",
     "webpack-cli": "^6.0.1",
-    "webpack-dev-server": "^5.2.2"
+    "webpack-dev-server": "^5.2.2",
+    "webpack-merge": "^6.0.1"
   }
 }
