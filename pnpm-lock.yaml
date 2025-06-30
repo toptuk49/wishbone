@@ -11,6 +11,9 @@ dependencies:
   '@types/jest':
     specifier: ^30.0.0
     version: 30.0.0
+  '@types/webpack-dev-server':
+    specifier: ^4.7.2
+    version: 4.7.2(webpack-cli@6.0.1)(webpack@5.99.9)
   browserslist:
     specifier: ^4.25.1
     version: 4.25.1
@@ -62,6 +65,9 @@ dependencies:
   webpack-dev-server:
     specifier: ^5.2.2
     version: 5.2.2(webpack-cli@6.0.1)(webpack@5.99.9)
+  webpack-merge:
+    specifier: ^6.0.1
+    version: 6.0.1
 
 packages:
 
@@ -1266,6 +1272,20 @@ packages:
     dependencies:
       '@types/expect': 1.20.4
       '@types/node': 24.0.7
+    dev: false
+
+  /@types/webpack-dev-server@4.7.2(webpack-cli@6.0.1)(webpack@5.99.9):
+    resolution: {integrity: sha512-Y3p0Fmfvp0MHBDoCzo+xFJaWTw0/z37mWIo6P15j+OtmUDLvznJWdZNeD7Q004R+MpQlys12oXbXsrXRmxwg4Q==}
+    deprecated: This is a stub types definition. webpack-dev-server provides its own type definitions, so you do not need this installed.
+    dependencies:
+      webpack-dev-server: 5.2.2(webpack-cli@6.0.1)(webpack@5.99.9)
+    transitivePeerDependencies:
+      - bufferutil
+      - debug
+      - supports-color
+      - utf-8-validate
+      - webpack
+      - webpack-cli
     dev: false
 
   /@types/ws@8.18.1:
