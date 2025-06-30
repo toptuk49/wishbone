@@ -4,7 +4,8 @@
   "description": "",
   "private": true,
   "scripts": {
-    "test": "jest",
+    "test:src": "node --experimental-vm-modules node_modules/jest/bin/jest.js ./src",
+    "test:config": " node --experimental-vm-modules node_modules/jest/bin/jest.js ./config",
     "dev": "webpack serve --open"
   },
   "keywords": [],
@@ -12,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "@types/gulp": "^4.0.17",
+    "@types/jest": "^30.0.0",
     "browserslist": "^4.25.1",
     "css-loader": "^7.1.2",
     "css-minimizer-webpack-plugin": "^7.0.2",
@@ -22,6 +24,7 @@
     "mini-css-extract-plugin": "^2.9.2",
     "sass": "^1.89.2",
     "sass-loader": "^16.0.5",
+    "ts-jest": "^29.4.0",
     "ts-loader": "^9.5.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3",
