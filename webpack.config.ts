@@ -37,7 +37,10 @@ export default {
     ]
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js"]
+    extensions: [".tsx", ".ts", ".js"],
+    alias: {
+      src: path.resolve(__dirname, "./src/")
+    }
   },
   output: {
     filename: "[contenthash:8].bundle.js",
