@@ -11,6 +11,10 @@ const module = {
       test: /\.s?css$/i,
       use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
     },
+    {
+      test: /\.html$/i,
+      use: ["html-loader"],
+    },
   ],
 };
 
