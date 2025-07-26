@@ -1,5 +1,3 @@
-import * as MiniCssExtractPlugin from "mini-css-extract-plugin";
-
 const module = {
   rules: [
     {
@@ -9,11 +7,15 @@ const module = {
     },
     {
       test: /\.s?css$/i,
-      use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+      use: ["css-loader", "sass-loader"],
     },
     {
-      test: /\.html$/i,
-      use: ["html-loader"],
+      test: /\.(png|svg|jpg|jpeg|gif)$/i,
+      type: "asset/resource",
+    },
+    {
+      test: /\.(woff|woff2|eot|ttf|otf)$/i,
+      type: "asset/resource",
     },
   ],
 };
