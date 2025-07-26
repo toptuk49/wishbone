@@ -6,13 +6,12 @@ import { optimization } from "./webpack/optimization";
 import { plugins } from "./webpack/plugins";
 
 const config: webpack.Configuration = {
-  entry: "./src/main.ts",
   plugins: plugins,
   module: module,
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
     alias: {
-      src: path.resolve(__dirname, "./src/"),
+      "@": path.resolve(__dirname, "../src"),
     },
   },
   optimization: optimization,
