@@ -5,7 +5,7 @@ const devServer = {
     directory: "./dist",
     watch: true,
   },
-  watchFiles: ["./src/**/*.html"],
+  watchFiles: ["./src/**/*.html", "./src/**/*.pug"],
   hot: true,
 };
 
