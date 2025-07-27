@@ -4,10 +4,11 @@ const plugins = [
   new HtmlBundlerPlugin({
     entry: [
       {
-        import: "./src/index.html",
+        import: "./src/index.pug",
         filename: "index.html",
       },
     ],
+    preprocessor: "pug",
     js: {
       filename: "[contenthash:8].bundle.js",
     },
