@@ -5,7 +5,10 @@
     "noImplicitAny": true,
     "target": "es5",
     "allowJs": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "paths": {
+      "@utils/*": ["./utils/*"]
+    }
   },
   "ts-node": {
     "compilerOptions": {
