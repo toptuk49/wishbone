@@ -9,7 +9,16 @@ const config: Config = {
   },
   extensionsToTreatAsEsm: [".ts"],
   testEnvironment: "node",
-  moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
+  moduleFileExtensions: [
+    "ts",
+    "tsx",
+    "js",
+    "jsx",
+    "json",
+    "node",
+    "sass",
+    "scss",
+  ],
   // Можно добавить ignore для node_modules, если надо
   transformIgnorePatterns: ["/node_modules/"],
   moduleNameMapper: {
