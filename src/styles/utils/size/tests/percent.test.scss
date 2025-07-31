@@ -1,6 +1,6 @@
 @use "pkg:sass-true" as *;
 
-@use "../functions" as *;
+@use "../size" as *;
 
 @include describe("Percent Unit Tests") {
   $half-px: 50;
