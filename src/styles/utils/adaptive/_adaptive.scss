@@ -1,0 +1,9 @@
+@use "sass:map";
+@use "sass:math";
+
+@function adaptive-clamp($from, $to, $screen-from, $screen-to) {
+  $slope: ($from - $to) / ($screen-from - $screen-to);
+  $intercept: $to - $slope * $screen-to;
+  $val: calc(#{$intercept} + #{$slope * 100}vw);
+  @return clamp(#{min($from, $to)}, #{$val}, #{max($from, $to)});
+}
