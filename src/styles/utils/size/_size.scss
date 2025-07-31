@@ -11,10 +11,10 @@
     @return error("inputs must not be null.", "percent", true);
   }
 
-  @return tryGetPercent($px, $from);
+  @return _tryGetPercent($px, $from);
 }
 
-@function tryGetPercent($px, $from) {
+@function _tryGetPercent($px, $from) {
   @return math.div($px, $from) * 100%;
 }
 
@@ -23,10 +23,10 @@
     @return error("input must not be null.", "rem", true);
   }
 
-  @return tryGetRems($px);
+  @return _tryGetRems($px);
 }
 
-@function tryGetRems($px) {
+@function _tryGetRems($px) {
   @return math.div($px, 16) * 1rem;
 }
 
@@ -39,9 +39,9 @@
     @return error("inputs must not be null.", "em", true);
   }
 
-  @return tryGetEms($px, $current);
+  @return _tryGetEms($px, $current);
 }
 
-@function tryGetEms($px, $current) {
+@function _tryGetEms($px, $current) {
   @return math.div($px, $current) * 1em;
 }
