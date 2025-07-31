@@ -1,0 +1,31 @@
+@use "pkg:sass-true" as *;
+
+@use "../functions" as *;
+
+@include describe("Percent Unit Tests") {
+  $half-px: 50;
+  $from: 100;
+
+  @include it("Must return correct percent for typical values") {
+    @include assert-equal(percent($half-px, $from), 50%);
+  }
+
+  @include it("Must return 0% if there are 0px") {
+    @include assert-equal(percent(0, $from), 0%);
+  }
+
+  @include it("Must return 100% if $px equals $from") {
+    @include assert-equal(percent($from, $from), 100%);
+  }
+
+  @include it("Must throw zero division error") {
+    @include assert-equal(percent($half-px, 0), "percent: divide by zero.");
+  }
+
+  @include it("Must throw error if input is null") {
+    @include assert-equal(
+      percent(null, null),
+      "percent: inputs must not be null."
+    );
+  }
+}
