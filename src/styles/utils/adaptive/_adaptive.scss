@@ -1,9 +1,30 @@
 @use "sass:map";
 @use "sass:math";
 
+@use "../error/error" as *;
+
 @function adaptive-clamp($from, $to, $screen-from, $screen-to) {
-  $slope: ($from - $to) / ($screen-from - $screen-to);
-  $intercept: $to - $slope * $screen-to;
-  $val: calc(#{$intercept} + #{$slope * 100}vw);
-  @return clamp(#{min($from, $to)}, #{$val}, #{max($from, $to)});
+  @if (
+    $from == null or $to == null or $screen-from == null or $screen-to == null
+  ) {
+    @return error("inputs must not be null.", "adaptive-clamp", true);
+  }
+
+  @if ($screen-from == $screen-to) {
+    @return error("divide by zero.", "adaptive-clamp", true);
+  }
+
+  @return _try-adaptive-clamp($from, $to, $screen-from, $screen-to);
+}
+
+@function _try-adaptive-clamp($from, $to, $screen-from, $screen-to) {
+  $min: math.min($from, $to);
+  $max: math.max($from, $to);
+
+  $slope: math.div(($to - $from), ($screen-to - $screen-from));
+  $vw: $slope * 100;
+  $intercept: $from - ($slope * $screen-from);
+  $sign: if($vw >= 0, "+", "-");
+  $preferred: calc(#{$intercept} #{$sign} #{math.abs($vw)}vw);
+  @return clamp(#{$min}, #{$preferred}, #{$max});
 }
