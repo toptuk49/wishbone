@@ -1,6 +1,6 @@
 @use "sass:math";
 
-@use "../error/error" as *;
+@use "@styles/abstracts/error" as *;
 
 @function percent($px, $from) {
   @if ($from == 0) {

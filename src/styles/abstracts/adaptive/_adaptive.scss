@@ -1,7 +1,7 @@
 @use "sass:map";
 @use "sass:math";
 
-@use "../error/error" as *;
+@use "@styles/abstracts/error" as *;
 
 @function adaptive-clamp($from, $to, $screen-from, $screen-to) {
   @if (

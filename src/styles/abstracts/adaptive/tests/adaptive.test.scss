@@ -2,8 +2,8 @@
 
 @use "sass:string" as *;
 
-@use "../adaptive" as *;
-@use "../../size/size" as *;
+@use "@styles/abstracts/adaptive" as *;
+@use "@styles/abstracts/size" as *;
 @use "variables" as *;
 @use "mocks" as *;
 
