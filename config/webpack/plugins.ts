@@ -4,7 +4,7 @@ const plugins = [
   new HtmlBundlerPlugin({
     entry: [
       {
-        import: "./src/index.pug",
+        import: "./src/views/pages/landing.pug",
         filename: "index.html",
       },
     ],
