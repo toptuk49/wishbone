@@ -5,14 +5,13 @@ import { WebpackTypes } from "./types";
 const resolve = {
   extensions: [".tsx", ".ts", ".js"],
   alias: {
-    "@": path.resolve(__dirname, "../../src"),
-    "@styles": path.resolve(__dirname, "../../src/styles"),
-    "@scripts": path.resolve(__dirname, "../../src/scripts"),
-    "@assets": path.resolve(__dirname, "../../src/assets"),
+    "@styles": path.resolve(process.cwd(), "src/styles"),
+    "@scripts": path.resolve(process.cwd(), "src/scripts"),
+    "@assets": path.resolve(process.cwd(), "src/assets"),
 
-    "@layout": path.resolve(__dirname, "../../src/views/layout"),
-    "@components": path.resolve(__dirname, "../../src/views/components"),
-    "@atoms": path.resolve(__dirname, "../../src/views/atoms"),
+    "@layout": path.resolve(process.cwd(), "src/views/layout"),
+    "@components": path.resolve(process.cwd(), "src/views/components"),
+    "@atoms": path.resolve(process.cwd(), "src/views/atoms"),
   },
 } satisfies WebpackTypes.Resolve;
 
