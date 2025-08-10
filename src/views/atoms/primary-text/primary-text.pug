@@ -1,0 +1,4 @@
+mixin primary-text(modifier)
+  - const className = "primary-text" + (modifier ? ` primary-text_${modifier}` : "")
+  span(class=className)
+    block
