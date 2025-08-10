@@ -1,5 +1,7 @@
 import * as path from "node:path";
 
+import { WebpackTypes } from "./types";
+
 const resolve = {
   extensions: [".tsx", ".ts", ".js"],
   alias: {
@@ -12,6 +14,6 @@ const resolve = {
     "@components": path.resolve(__dirname, "../../src/views/components"),
     "@atoms": path.resolve(__dirname, "../../src/views/atoms"),
   },
-};
+} satisfies WebpackTypes.Resolve;
 
 export { resolve };

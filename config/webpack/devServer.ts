@@ -1,4 +1,4 @@
-import "webpack-dev-server";
+import { WebpackTypes } from "./types";
 
 const devServer = {
   static: {
@@ -7,6 +7,6 @@ const devServer = {
   },
   watchFiles: ["./src/**/*.html", "./src/**/*.pug"],
   hot: true,
-};
+} satisfies WebpackTypes.DevServer;
 
 export { devServer };

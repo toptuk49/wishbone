@@ -2,6 +2,8 @@ import * as CssMinimizerPlugin from "css-minimizer-webpack-plugin";
 import * as lightningcss from "lightningcss";
 import * as browserslist from "browserslist";
 
+import { WebpackTypes } from "./types";
+
 const optimization = {
   minimize: true,
   minimizer: [
@@ -13,6 +15,6 @@ const optimization = {
       },
     }),
   ],
-};
+} satisfies WebpackTypes.Optimization;
 
 export { optimization };
