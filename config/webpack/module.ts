@@ -9,7 +9,17 @@ const module = {
     },
     {
       test: /\.s?css$/i,
-      use: ["css-loader", "sass-loader"],
+      use: [
+        "css-loader",
+        {
+          loader: "sass-loader",
+          options: {
+            sassOptions: {
+              loadPaths: ["node_modules"],
+            },
+          },
+        },
+      ],
     },
     {
       test: /\.(png|svg|jpg|jpeg|gif)$/i,
