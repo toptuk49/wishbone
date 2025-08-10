@@ -1,6 +1,6 @@
 @use "pkg:sass-true" as *;
 
-@use "../size" as *;
+@use "@styles/abstracts/size" as *;
 
 @include describe("Em Unit Tests") {
   $basic-size: 16;
