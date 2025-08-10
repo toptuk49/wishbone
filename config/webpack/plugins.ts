@@ -1,5 +1,7 @@
 import * as HtmlBundlerPlugin from "html-bundler-webpack-plugin";
 
+import { WebpackTypes } from "./types";
+
 const plugins = [
   new HtmlBundlerPlugin({
     entry: [
@@ -16,6 +18,6 @@ const plugins = [
       filename: "[contenthash:8].bundle.css",
     },
   }),
-];
+] satisfies WebpackTypes.Plugins;
 
 export { plugins };

@@ -1,3 +1,5 @@
+import { WebpackTypes } from "./types";
+
 const module = {
   rules: [
     {
@@ -18,6 +20,6 @@ const module = {
       type: "asset/resource",
     },
   ],
-};
+} satisfies WebpackTypes.Module;
 
 export { module };
