@@ -79,11 +79,18 @@ class ExecutorTests {
 
   private assertTestFileByIndexRan(path: Path, index: number) {
     const callNumber = index + 1;
-    const runSassArguments = [{ describe, it }, path];
 
     expect(this.mockedSassTrue.runSass).toHaveBeenNthCalledWith(
       callNumber,
-      ...runSassArguments,
+      { describe, it },
+      path,
+      expect.objectContaining({
+        importers: expect.any(Array),
+        loadPaths: expect.arrayContaining([
+          expect.stringContaining("node_modules"),
+          expect.stringContaining("src/styles"),
+        ]),
+      }),
     );
   }
 
