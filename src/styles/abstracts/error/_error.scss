@@ -1,5 +1,5 @@
 @use "sass:meta";
-@use "throw";
+@use "@styles/vendor/throw";
 
 @function error($message, $source: null, $catch: true) {
   $raw-error: throw.error(
