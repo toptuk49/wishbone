@@ -12,3 +12,17 @@
     align-items: center;
   }
 }
+
+.nav-header {
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: rem(30);
+  }
+
+  &__item {
+  }
+
+  &__button {
+  }
+}
