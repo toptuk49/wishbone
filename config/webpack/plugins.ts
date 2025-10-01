@@ -17,6 +17,13 @@ const plugins = [
     css: {
       filename: "[contenthash:8].bundle.css",
     },
+    preload: [
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        as: "font",
+        type: "font/woff2",
+      },
+    ],
   }),
 ] satisfies WebpackTypes.Plugins;
 
