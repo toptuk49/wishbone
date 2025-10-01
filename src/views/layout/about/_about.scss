@@ -1,0 +1,13 @@
+@use "@styles/abstracts" as *;
+
+.about {
+  padding: rem(100) 0;
+
+  &__container {
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

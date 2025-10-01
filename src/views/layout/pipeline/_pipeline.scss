@@ -1,0 +1,14 @@
+@use "@styles/abstracts" as *;
+
+.overview {
+  padding: rem(100) 0;
+
+  &__container {
+    margin: 0 auto;
+    max-width: rem(1200);
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}

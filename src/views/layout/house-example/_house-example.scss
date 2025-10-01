@@ -1,0 +1,12 @@
+@use "@styles/abstracts" as *;
+
+.house-example {
+  &__container {
+    margin: 0 auto;
+    max-width: rem(1400);
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}

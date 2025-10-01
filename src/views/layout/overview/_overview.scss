@@ -1,0 +1,12 @@
+@use "@styles/abstracts" as *;
+
+.overview {
+  &__container {
+    margin: 0 auto;
+    max-width: rem(1400);
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}

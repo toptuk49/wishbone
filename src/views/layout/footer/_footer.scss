@@ -1,0 +1,17 @@
+@use "@styles/abstracts" as *;
+
+.footer {
+  padding-top: rem(60);
+  padding-left: 0;
+  padding-bottom: rem(40);
+  padding-right: 0;
+
+  &__container {
+    margin: 0 auto;
+    max-width: rem(1168);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

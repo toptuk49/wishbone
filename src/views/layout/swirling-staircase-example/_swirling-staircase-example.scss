@@ -1,0 +1,12 @@
+@use "@styles/abstracts" as *;
+
+.swirling-staircase-example {
+  &__container {
+    margin: 0 auto;
+    max-width: rem(1400);
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}

@@ -1,0 +1,14 @@
+@use "@styles/abstracts" as *;
+
+.customers {
+  padding: rem(60) 0;
+
+  &__container {
+    margin: 0 auto;
+    max-width: rem(1168);
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
