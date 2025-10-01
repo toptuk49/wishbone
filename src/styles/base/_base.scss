@@ -1,4 +1,7 @@
+@use "@styles/abstracts" as *;
+
 .body {
   display: flex;
   flex-direction: column;
+  font-family: $fontFamily;
 }
