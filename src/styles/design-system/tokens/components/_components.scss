@@ -1,0 +1,46 @@
+@use "sass:map";
+
+@use "@styles/design-system/tokens/semantics" as semantics;
+
+@mixin apply-typography($type) {
+  font-style: map.get($type, font-style);
+  font-size: map.get($type, font-size);
+  line-height: map.get($type, line-height);
+  font-weight: map.get($type, font-weight);
+}
+
+.primary-text {
+  @include apply-typography(semantics.$primary-text);
+}
+
+.eyebrow-text {
+  @include apply-typography(semantics.$eyebrow-text);
+}
+
+.secondary-text {
+  @include apply-typography(semantics.$secondary-text);
+}
+
+.seat-text {
+  @include apply-typography(semantics.$seat-text);
+}
+
+.name-text {
+  @include apply-typography(semantics.$name-text);
+}
+
+.heading-medium {
+  @include apply-typography(semantics.$heading-medium);
+}
+
+.title-text {
+  @include apply-typography(semantics.$title-text);
+}
+
+.heading-large {
+  @include apply-typography(semantics.$heading-large);
+}
+
+.heading-slider {
+  @include apply-typography(semantics.$heading-slider);
+}

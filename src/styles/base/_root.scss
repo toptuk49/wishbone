@@ -1,0 +1,7 @@
+@use "@styles/design-system/tokens/components" as components;
+@use "@styles/design-system/tokens/semantics" as tokens;
+
+body {
+  @extend .primary-text;
+  color: tokens.$color-text-primary;
+}
