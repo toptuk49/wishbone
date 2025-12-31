@@ -1,0 +1,64 @@
+@use "@styles/design-system/tokens/primitives" as primitives;
+
+$primary-text: (
+  font-family: primitives.$font-family-basic,
+  font-size: primitives.$font-size-16,
+  line-height: primitives.$line-height-24,
+  font-weight: primitives.$font-weight-regular,
+);
+
+$eyebrow-text: (
+  font-family: primitives.$font-family-basic,
+  font-size: primitives.$font-size-14,
+  line-height: primitives.$line-height-20,
+  font-weight: primitives.$font-weight-regular,
+);
+
+$secondary-text: (
+  font-family: primitives.$font-family-basic,
+  font-size: primitives.$font-size-15,
+  line-height: primitives.$line-height-24,
+  font-weight: primitives.$font-weight-regular,
+);
+
+$seat-text: (
+  font-family: primitives.$font-family-basic,
+  font-size: primitives.$font-size-14,
+  line-height: primitives.$line-height-14,
+  font-weight: primitives.$font-weight-regular,
+);
+
+$name-text: (
+  font-family: primitives.$font-family-basic,
+  font-size: primitives.$font-size-18,
+  line-height: primitives.$line-height-26,
+  font-weight: primitives.$font-weight-regular,
+);
+
+$heading-medium: (
+  font-family: primitives.$font-family-basic,
+  font-size: primitives.$font-size-32,
+  line-height: primitives.$line-height-38,
+  font-weight: primitives.$font-weight-regular,
+);
+
+$title-text: (
+  font-family: primitives.$font-family-basic,
+  font-size: primitives.$font-size-64,
+  line-height: primitives.$line-height-70-4,
+  font-weight: primitives.$font-weight-regular,
+);
+
+$heading-large: (
+  font-family: primitives.$font-family-basic,
+  font-size: primitives.$font-size-40,
+  line-height: primitives.$line-height-42,
+  font-weight: primitives.$font-weight-regular,
+);
+
+$heading-slider: (
+  font-family: primitives.$font-family-basic,
+  font-size: primitives.$font-size-23,
+  line-height: primitives.$line-height-30,
+  font-weight: primitives.$font-weight-regular,
+);

@@ -1,0 +1,42 @@
+@use "sass:math";
+
+@use "@styles/abstracts/size" as size;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+$font-family-basic: "Poppins", sans-serif;
+
+$font-weight-thin: 100;
+$font-weight-extralight: 200;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+
+$font-size-basic: size.rem(14);
+$font-size-14: size.rem(14);
+$font-size-15: size.rem(15);
+$font-size-16: size.rem(16);
+$font-size-18: size.rem(18);
+$font-size-20: size.rem(20);
+$font-size-23: size.rem(23);
+$font-size-24: size.rem(24);
+$font-size-26: size.rem(26);
+$font-size-30: size.rem(30);
+$font-size-32: size.rem(32);
+$font-size-38: size.rem(38);
+$font-size-40: size.rem(40);
+$font-size-42: size.rem(42);
+$font-size-64: size.rem(64);
+$font-size-70-4: size.rem(70.4);
+
+$line-height-14: math.div($font-size-14, $font-size-basic);
+$line-height-20: math.div($font-size-20, $font-size-basic);
+$line-height-24: math.div($font-size-24, $font-size-basic);
+$line-height-26: math.div($font-size-26, $font-size-basic);
+$line-height-30: math.div($font-size-30, $font-size-basic);
+$line-height-38: math.div($font-size-38, $font-size-basic);
+$line-height-42: math.div($font-size-42, $font-size-basic);
+$line-height-70-4: math.div($font-size-70-4, $font-size-basic);
