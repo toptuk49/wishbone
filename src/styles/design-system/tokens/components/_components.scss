@@ -3,7 +3,7 @@
 @use "@styles/design-system/tokens/semantics" as semantics;
 
 @mixin apply-typography($type) {
-  font-style: map.get($type, font-style);
+  font-family: map.get($type, font-family);
   font-size: map.get($type, font-size);
   line-height: map.get($type, line-height);
   font-weight: map.get($type, font-weight);
@@ -41,6 +41,6 @@
   @include apply-typography(semantics.$heading-large);
 }
 
-.heading-slider {
-  @include apply-typography(semantics.$heading-slider);
+.heading-content {
+  @include apply-typography(semantics.$heading-content);
 }
