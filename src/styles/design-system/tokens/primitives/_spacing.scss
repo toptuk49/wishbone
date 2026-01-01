@@ -1,0 +1,9 @@
+@use "@styles/abstracts/size" as size;
+
+$container-base: size.rem(20);
+
+$container-xs: $container-base * 1; // 20px
+$container-sm: $container-base * 2; // 40px
+$container-md: $container-base * 3; // 60px
+$container-lg: $container-base * 5; // 100px
+$container-xl: $container-base * 6; // 120px
