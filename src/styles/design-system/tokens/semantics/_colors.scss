@@ -1,13 +1,19 @@
 @use "@styles/design-system/tokens/primitives" as primitives;
 
+// Text colors
 $color-text-primary: primitives.$color-neutral-700;
 $color-text-secondary: primitives.$color-neutral-600;
 $color-text-tertiary: primitives.$color-neutral-500;
 $color-text-light: primitives.$color-neutral-300;
 $color-text-ultralight: primitives.$color-neutral-100;
 
+// Containers backgrounds
 $color-background-primary: primitives.$color-neutral-100;
 $color-background-overview: primitives.$color-neutral-300;
 $color-background-customers: primitives.$color-neutral-600;
 $color-background-featured: primitives.$color-neutral-200;
 $color-background-contact: primitives.$color-neutral-400;
+
+// Specific colors
+$color-background-button: primitives.$color-neutral-700;
+$color-atoms-border: primitives.$color-neutral-400;

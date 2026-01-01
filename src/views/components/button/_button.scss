@@ -1,0 +1,25 @@
+@use "@styles/abstracts/size" as size;
+@use "@styles/design-system/tokens/semantics" as tokens;
+
+.button {
+  padding: size.rem(11) size.rem(20);
+  transition: tokens.$transition-hover;
+  border-radius: tokens.$border-radius-atoms;
+
+  &-primary {
+    border: size.rem(1) solid tokens.$color-background-button;
+    background: tokens.$color-background-button;
+    color: tokens.$color-text-ultralight;
+  }
+
+  &-transparent {
+    border: none;
+    background: transparent;
+    color: tokens.$color-text-primary;
+  }
+
+  &::hover {
+    background: rgba(tokens.$color-background-button, 0.7);
+    box-shadow: tokens.$shadow-edge-indicator;
+  }
+}

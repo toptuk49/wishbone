@@ -1,0 +1,6 @@
+mixin button({text, variant = "primary", modalId = null, type = "button"})
+  button.button(
+    class=`button-${variant}`
+    type=type
+    data-modal-target=modalId
+  )= text
