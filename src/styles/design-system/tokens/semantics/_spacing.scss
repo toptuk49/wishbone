@@ -1,0 +1,27 @@
+@use "@styles/design-system/tokens/primitives" as primitives;
+@use "@styles/design-system/responsive" as responsive;
+
+$header-container: responsive.fluid(
+  primitives.$container-xs,
+  responsive.$mobile-spacing-ratio
+);
+
+$about-container-left: responsive.fluid(
+  primitives.$container-sm,
+  responsive.$mobile-spacing-ratio
+);
+
+$section-container: responsive.fluid(
+  primitives.$container-lg,
+  responsive.$mobile-spacing-ratio
+);
+
+$customers-container: responsive.fluid(
+  primitives.$container-md,
+  responsive.$mobile-spacing-ratio
+);
+
+$footer-container: responsive.fluid(
+  primitives.$container-md,
+  responsive.$mobile-spacing-ratio
+);
