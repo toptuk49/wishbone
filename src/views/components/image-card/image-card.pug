@@ -1,0 +1,9 @@
+include @components/button/button.pug
+
+mixin image-card()
+  .image-card
+    .image-card__container
+      .image-card-info
+        span.image-card-info__eyebrow NEW YORK
+        span.image-card-info__heading Big Road Brewery
+      +button("Read more")
