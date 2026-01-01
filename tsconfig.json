@@ -7,7 +7,12 @@
     "allowJs": true,
     "moduleResolution": "node",
     "paths": {
-      "@utils/*": ["./utils/*"]
+      "@utils/*": [
+        "./utils/*"
+      ],
+      "@components/*": [
+        "./src/views/components/*"
+      ]
     }
   },
   "ts-node": {
