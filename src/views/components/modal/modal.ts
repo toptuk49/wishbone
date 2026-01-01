@@ -1,0 +1,3 @@
+class ModalComponent { }
+
+export { ModalComponent };

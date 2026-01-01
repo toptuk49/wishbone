@@ -1,0 +1,123 @@
+include @components/button/button.pug
+
+mixin modal({id, buttonText = null, fields = [], title = null})
+  .modal(id=id)
+    .modal__overlay
+    .modal__content
+      button.modal__close(type="button")
+      
+      if title
+        .modal__title.title-modal
+          h2.title-modal__text= title
+      
+      form.modal__form
+        each field, index in fields
+          - const fieldId = `${id}-${index}`
+          - const fieldType = field.type || "text"
+          - const fieldLabel = field.label || field
+          - const fieldPlaceholder = field.placeholder || `Введите ${fieldLabel}`
+          - const fieldValue = field.value || ""
+          
+          .modal__field(class=`modal__field-${fieldType}`)
+            label.modal__label(for=fieldId)= fieldLabel
+            
+            if fieldType === "text" || fieldType === "email" || fieldType === "password" || fieldType === "tel" || fieldType === "number" || fieldType === "url"
+              input.modal__input(
+                type=fieldType
+                id=fieldId
+                name=field.name || fieldId
+                placeholder=fieldPlaceholder
+                value=fieldValue
+                required=field.required !== false
+                disabled=field.disabled || false
+              )
+            
+            if fieldType === "textarea"
+              textarea.modal__textarea(
+                id=fieldId
+                name=field.name || fieldId
+                placeholder=fieldPlaceholder
+                required=field.required !== false
+                disabled=field.disabled || false
+                rows=field.rows || 4
+              )= fieldValue
+            
+            if fieldType === "select"
+              select.modal__select(
+                id=fieldId
+                name=field.name || fieldId
+                required=field.required !== false
+                disabled=field.disabled || false
+              )
+                if field.placeholder
+                  option(value="" disabled selected)= field.placeholder
+                each option in field.options || []
+                  option(
+                    value=option.value
+                    selected=option.selected || false
+                  )= option.label
+            
+            else if fieldType === "checkbox"
+              .modal__checkbox-group
+                input.modal__checkbox(
+                  type="checkbox"
+                  id=fieldId
+                  name=field.name || fieldId
+                  checked=field.checked || false
+                  disabled=field.disabled || false
+                )
+                label.modal__checkbox-label(for=fieldId)= fieldLabel
+            
+            else if fieldType === "radio"
+              .modal__radio-group
+                each radioOption, radioIndex in field.options || []
+                  - const radioId = `${fieldId}-${radioIndex}`
+                  .modal__radio-item
+                    input.modal__radio(
+                      type="radio"
+                      id=radioId
+                      name=field.name || fieldId
+                      value=radioOption.value
+                      checked=radioOption.checked || false
+                      disabled=field.disabled || false
+                    )
+                    label.modal__radio-label(for=radioId)= radioOption.label
+            
+            else if fieldType === "file"
+              input.modal__file(
+                type="file"
+                id=fieldId
+                name=field.name || fieldId
+                accept=field.accept
+                multiple=field.multiple || false
+                required=field.required !== false
+                disabled=field.disabled || false
+              )
+            
+            else if fieldType === "hidden"
+              input(
+                type="hidden"
+                id=fieldId
+                name=field.name || fieldId
+                value=fieldValue
+              )
+            
+            else if fieldType === "date" || fieldType === "time" || fieldType === "datetime-local" || fieldType === "month" || fieldType === "week" || fieldType === "range" || fieldType === "color"
+              input.modal__input(
+                type=fieldType
+                id=fieldId
+                name=field.name || fieldId
+                value=fieldValue
+                required=field.required !== false
+                disabled=field.disabled || false
+                min=field.min
+                max=field.max
+                step=field.step
+              )
+        
+        if buttonText
+          .modal__button-container
+            +button({
+              text: buttonText,
+              type: "submit"
+            })
