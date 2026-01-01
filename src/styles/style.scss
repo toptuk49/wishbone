@@ -1,3 +1,5 @@
 @use "./base" as *;
+@use "./design-system/tokens/components" as *;
 
+@use "@components" as *;
 @use "@layout" as *;

@@ -1,0 +1,5 @@
+@use "@styles/abstracts/size" as size;
+
+@use "./colors" as colors;
+
+$drop-shadow: size.rem(11) size.rem(11) size.rem(25) colors.$color-drop-shadow;

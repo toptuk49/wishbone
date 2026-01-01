@@ -1,0 +1,4 @@
+@use "@styles/design-system/tokens/primitives" as primitives;
+
+$border-radius-atoms: primitives.$border-radius-14;
+$border-radius-layout: primitives.$border-radius-12;
