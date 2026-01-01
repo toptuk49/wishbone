@@ -1,0 +1,13 @@
+@use "./settings" as settings;
+@use "@styles/abstracts/adaptive" as adaptive;
+
+@function fluid($desktop-value, $mobile-ratio: 0.4) {
+  $mobile-value: $desktop-value * $mobile-ratio;
+
+  @return adaptive.adaptive-clamp(
+    $from: $mobile-value,
+    $to: $desktop-value,
+    $screen-from: settings.$mobile-breakpoint,
+    $screen-to: settings.$desktop-breakpoint
+  );
+}
