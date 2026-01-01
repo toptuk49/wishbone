@@ -1,0 +1,37 @@
+@use "@styles/abstracts/size";
+@use "@styles/design-system/tokens/components" as components;
+@use "@styles/design-system/tokens/semantics" as tokens;
+
+.person {
+  display: flex;
+  align-items: center;
+  gap: size.rem(30);
+}
+
+.person-avatar {
+  border-radius: 50%;
+  width: size.rem(84);
+  height: size.rem(84);
+
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.person-info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.1rem;
+
+  &__name {
+    @include components.apply-typography(tokens.$name-text);
+    color: tokens.$color-text-primary;
+  }
+
+  &__seat {
+    color: tokens.$color-text-tertiary;
+    margin-top: size.rem(2);
+    line-height: 0;
+  }
+}

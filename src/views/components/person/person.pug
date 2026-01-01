@@ -1,0 +1,9 @@
+mixin person(imagePath, name, seat)
+  - const altText = `${name} avatar`
+  .person
+    .person-avatar
+      img.person-avatar__image(src=imagePath, alt=altText)
+    .person-info
+      span.person-info__name= name
+      span.person-info__seat= seat
+
