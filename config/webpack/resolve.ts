@@ -11,7 +11,6 @@ const resolve = {
 
     "@layout": path.resolve(process.cwd(), "src/views/layout"),
     "@components": path.resolve(process.cwd(), "src/views/components"),
-    "@atoms": path.resolve(process.cwd(), "src/views/atoms"),
   },
 } satisfies WebpackTypes.Resolve;
 
