@@ -1,0 +1,10 @@
+@use "@styles/abstracts/size";
+
+// Configure it manually
+
+$mobile-breakpoint: size.rem(320);
+$tablet-breakpoint: size.rem(768);
+$desktop-breakpoint: size.rem(1320);
+
+$mobile-spacing-ratio: 0.4; // 100px -> 40px
+$mobile-font-size-ratio: 0.5; // 32px -> 16px

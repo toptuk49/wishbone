@@ -1,0 +1,19 @@
+@use "./settings" as settings;
+
+@mixin mobile {
+  @media (max-width: #{settings.$tablet-breakpoint - 1}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: settings.$tablet-breakpoint) and (max-width: #{settings.$desktop-breakpoint - 1}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: settings.$desktop-breakpoint) {
+    @content;
+  }
+}
