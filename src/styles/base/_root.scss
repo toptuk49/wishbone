@@ -2,6 +2,6 @@
 @use "@styles/design-system/tokens/semantics" as tokens;
 
 body {
-  @extend .primary-text;
+  @include components.apply-typography(tokens.$primary-text);
   color: tokens.$color-text-primary;
 }
