@@ -4,18 +4,16 @@ import { WebpackTypes } from "./types";
 
 const plugins = [
   new HtmlBundlerPlugin({
-    entry: [
-      {
-        import: "./src/views/pages/landing.pug",
-        filename: "index.html",
-      },
-    ],
+    entry: {
+      landing: "./src/views/pages/landing.pug",
+      sandbox: "./src/views/pages/sandbox.pug",
+    },
     preprocessor: "pug",
     js: {
-      filename: "[contenthash:8].bundle.js",
+      filename: "scripts/[name].[contenthash:8].js",
     },
     css: {
-      filename: "[contenthash:8].bundle.css",
+      filename: "styles/[name].[contenthash:8].css",
     },
   }),
 ] satisfies WebpackTypes.Plugins;
