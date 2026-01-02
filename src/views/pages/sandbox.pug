@@ -1,0 +1,45 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Wishbone | Welcome
+    script(src="@scripts/landing.ts", defer="defer")
+    link(href="@styles/style.scss", rel="stylesheet")
+  body 
+    block header
+      include @layout/header/header.pug
+
+    main
+      block overview
+        include @layout/overview/overview.pug
+
+      block about
+        include @layout/about/about.pug
+
+      block house-example
+        include @layout/house-example/house-example.pug
+
+      block pipeline
+        include @layout/pipeline/pipeline.pug
+
+      block marble-staircase-example
+        include @layout/marble-staircase-example/marble-staircase-example.pug
+
+      block customers
+        include @layout/customers/customers.pug
+
+      block swirling-staircase-example
+        include @layout/swirling-staircase-example/swirling-staircase-example.pug
+
+      block featured
+        include @layout/featured/featured.pug
+
+      block team
+        include @layout/team/team.pug
+
+      block contact
+        include @layout/contact/contact.pug
+
+    block footer
+      include @layout/footer/footer.pug

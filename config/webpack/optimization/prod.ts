@@ -1,10 +1,11 @@
+// Using lightningcss to optimize, minify and support styles in older browsers
+
 import * as CssMinimizerPlugin from "css-minimizer-webpack-plugin";
 import * as lightningcss from "lightningcss";
 import * as browserslist from "browserslist";
+import { WebpackTypes } from "../types";
 
-import { WebpackTypes } from "./types";
-
-const optimization = {
+export const optimizationProd = {
   minimize: true,
   minimizer: [
     new CssMinimizerPlugin({
@@ -15,6 +16,4 @@ const optimization = {
       },
     }),
   ],
-} satisfies WebpackTypes.Optimization;
-
-export { optimization };
+} satisfies Partial<WebpackTypes.Optimization>;
