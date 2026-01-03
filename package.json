@@ -2,8 +2,7 @@
   "name": "wishbone",
   "private": true,
   "scripts": {
-    "test:src": "jest --watch ./src",
-    "test:config": "jest --watch ./config",
+    "test": "jest --watch ./src",
     "dev": "webpack serve --open --config config/webpack.dev.ts",
     "build": "npm run test:src && webpack --config config/webpack.prod.ts",
     "gulp": "gulp"
@@ -22,6 +21,7 @@
     "browserslist": "^4.25.1",
     "css-loader": "^7.1.2",
     "css-minimizer-webpack-plugin": "^7.0.2",
+    "glob": "^13.0.0",
     "gulp": "^5.0.1",
     "gulp-ttf2woff": "^2.0.0",
     "gulp-ttf2woff2": "^5.0.0",
