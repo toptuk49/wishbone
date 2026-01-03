@@ -1,7 +1,7 @@
 import * as fs from "node:fs/promises";
 import * as path from "node:path";
 
-import { paths } from "@common/paths";
+import { paths } from "@config/common/paths";
 import { parseFontName } from "./parser";
 
 export async function generateFontStyles(): Promise<void> {

@@ -15,8 +15,8 @@
     "alwaysStrict": true,
     // Aliases
     "paths": {
-      "@common/*": [
-        "./config/common/*"
+      "@config/*": [
+        "./config/*"
       ],
       "@components/*": [
         "./src/views/components/*"
