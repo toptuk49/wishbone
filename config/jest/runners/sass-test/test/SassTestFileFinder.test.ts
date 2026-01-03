@@ -61,8 +61,8 @@ class FinderTests {
   private assertTestFilesFound() {
     const basePath = path.resolve(__dirname, "./__test_data__/existingFolder");
     expect(this.testFiles).toStrictEqual([
-      path.join(basePath, "test1.test.scss"),
-      path.join(basePath, "nestedFolder/test2.test.sass"),
+      path.join(basePath, "flat.test.scss"),
+      path.join(basePath, "nestedFolder/nested.test.sass"),
     ]);
   }
 

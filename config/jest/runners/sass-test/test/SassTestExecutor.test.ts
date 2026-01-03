@@ -62,8 +62,8 @@ class ExecutorTests {
 
   private prepareValidTestFilePaths() {
     this.filePaths = [
-      "./__test_data__/existingFolder/test1.test.scss",
-      "./__test_data__/existingFolder/nestedFolder/test2.test.sass",
+      "./__test_data__/existingFolder/flat.test.scss",
+      "./__test_data__/existingFolder/nestedFolder/nested.test.sass",
     ];
   }
 

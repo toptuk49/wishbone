@@ -1,7 +1,7 @@
 import * as path from "node:path";
 import { pathToFileURL } from "node:url";
 
-import { resolve as webpackResolvers } from "../../config/webpack/resolve";
+import { resolve as webpackResolvers } from "../../../webpack/resolve";
 
 export class AliasImporter {
   private aliases: WebpackAliases;

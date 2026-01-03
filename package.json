@@ -4,7 +4,6 @@
   "scripts": {
     "test:src": "jest --watch ./src",
     "test:config": "jest --watch ./config",
-    "test:utils": "jest --watch ./utils",
     "dev": "webpack serve --open --config config/webpack.dev.ts",
     "build": "npm run test:src && webpack --config config/webpack.prod.ts",
     "gulp": "gulp"
