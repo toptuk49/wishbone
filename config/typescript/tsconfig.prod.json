@@ -1,8 +1,6 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "module": "es2022",
-    "target": "es5",
     "removeComments": true
   },
   "include": [
