@@ -7,6 +7,7 @@ import { WebpackTypes } from "../types";
 
 export const optimizationProd = {
   minimize: true,
+  usedExports: true,
   minimizer: [
     new CssMinimizerPlugin({
       minify: CssMinimizerPlugin.lightningCssMinify,
