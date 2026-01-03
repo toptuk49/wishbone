@@ -16,4 +16,14 @@ export const optimizationProd = {
       },
     }),
   ],
+  moduleIds: "deterministic",
+  splitChunks: {
+    cacheGroups: {
+      vendor: {
+        test: /[\\/]node_modules[\\/]/,
+        name: "vendors",
+        chunks: "all",
+      },
+    },
+  },
 } satisfies Partial<WebpackTypes.Optimization>;
