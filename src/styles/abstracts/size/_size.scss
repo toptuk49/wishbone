@@ -1,47 +1,13 @@
 @use "sass:math";
 
-@use "@styles/abstracts/error" as *;
-
 @function percent($px, $from) {
-  @if ($from == 0) {
-    @return error("divide by zero.", "percent", true);
-  }
-
-  @if ($px == null or $from == null) {
-    @return error("inputs must not be null.", "percent", true);
-  }
-
-  @return _try-get-percent($px, $from);
-}
-
-@function _try-get-percent($px, $from) {
   @return math.div($px, $from) * 100%;
 }
 
 @function rem($px) {
-  @if ($px == null) {
-    @return error("input must not be null.", "rem", true);
-  }
-
-  @return _try-get-rems($px);
-}
-
-@function _try-get-rems($px) {
   @return math.div($px, 16) * 1rem;
 }
 
-@function em($px, $current: 16) {
-  @if ($current == 0) {
-    @return error("base size cannot be zero.", "em", true);
-  }
-
-  @if ($px == null or $current == null) {
-    @return error("inputs must not be null.", "em", true);
-  }
-
-  @return _try-get-ems($px, $current);
-}
-
-@function _try-get-ems($px, $current) {
+@function em($px, $current) {
   @return math.div($px, $current) * 1em;
 }

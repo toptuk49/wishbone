@@ -1,22 +1,6 @@
 @use "sass:math";
 
-@use "@styles/abstracts/error" as *;
-
 @function adaptive-clamp($from, $to, $screen-from, $screen-to) {
-  @if (
-    $from == null or $to == null or $screen-from == null or $screen-to == null
-  ) {
-    @return error("inputs must not be null.", "adaptive-clamp", true);
-  }
-
-  @if ($screen-from == $screen-to) {
-    @return error("divide by zero.", "adaptive-clamp", true);
-  }
-
-  @return _try-adaptive-clamp($from, $to, $screen-from, $screen-to);
-}
-
-@function _try-adaptive-clamp($from, $to, $screen-from, $screen-to) {
   $min: math.min($from, $to);
   $max: math.max($from, $to);
 
