@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "inlineSources": true,
+    "declaration": false,
+    "incremental": true,
+    "tsBuildInfoFile": ".tsbuildinfo-dev"
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
