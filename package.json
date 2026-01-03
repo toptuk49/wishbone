@@ -1,7 +1,5 @@
 {
   "name": "wishbone",
-  "version": "1.0.0",
-  "description": "",
   "private": true,
   "scripts": {
     "test:src": "jest --watch ./src",
@@ -10,9 +8,6 @@
     "dev": "webpack serve --open --config config/webpack.dev.ts",
     "build": "npm run test:src && webpack --config config/webpack.prod.ts"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.28.0",
     "@babel/core": "^7.28.0",
