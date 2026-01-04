@@ -1,16 +1,16 @@
-import * as path from "node:path";
-
 import { WebpackTypes } from "./types";
+
+import { paths } from "../common/paths";
 
 const resolve = {
   extensions: [".tsx", ".ts", ".js"],
   alias: {
-    "@styles": path.resolve(process.cwd(), "src/styles"),
-    "@scripts": path.resolve(process.cwd(), "src/scripts"),
-    "@assets": path.resolve(process.cwd(), "src/assets"),
+    "@styles": paths.styles,
+    "@scripts": paths.scripts,
+    "@assets": paths.assets,
 
-    "@layout": path.resolve(process.cwd(), "src/views/layout"),
-    "@components": path.resolve(process.cwd(), "src/views/components"),
+    "@layout": paths.layout,
+    "@components": paths.components,
   },
 } satisfies WebpackTypes.Resolve;
 

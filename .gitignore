@@ -5,6 +5,8 @@
 logs
 *.log
 npm-debug.log*
+# Unignore .env
+!.env
 
 # Runtime data
 pids

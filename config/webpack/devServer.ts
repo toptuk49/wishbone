@@ -5,8 +5,15 @@ const devServer = {
     directory: "./dist",
     watch: true,
   },
-  watchFiles: ["./src/**/*.html", "./src/**/*.pug"],
-  hot: true,
+  watchFiles: {
+    paths: ["src/**/*.*"],
+    options: {
+      usePolling: false,
+      interval: 100,
+    },
+  },
+  hot: true, // HMR
+  compress: true,
 } satisfies WebpackTypes.DevServer;
 
 export { devServer };

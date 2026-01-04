@@ -1,15 +1,20 @@
 {
   "compilerOptions": {
-    "outDir": "./dist",
     "module": "es2022",
-    "noImplicitAny": true,
     "target": "es5",
-    "allowJs": true,
     "moduleResolution": "node",
+    "sourceMap": true,
+    // Strict settings
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    // Aliases
     "paths": {
-      "@utils/*": [
-        "./utils/*"
-      ],
       "@components/*": [
         "./src/views/components/*"
       ]
